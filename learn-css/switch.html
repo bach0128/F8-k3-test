@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+
+    <style>
+      .switch {
+        margin: 30px auto;
+        display: block;
+        width: 80px;
+        height: 30px;
+        background-color: gray;
+        border-radius: 99px;
+        position: relative;
+      }
+
+      .switch .btn {
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transition: left 0.5s ease;
+        z-index: 1;
+      }
+
+      .switch .bg {
+        position: absolute;
+        inset: 0;
+        border-radius: 99px;
+        transition: background 0.5s ease;
+      }
+
+      .switch input:checked + .btn {
+        left: calc(100% - 30px);
+      }
+
+      .switch input:checked ~ .bg {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <label class="switch" for="box">
+      <input type="checkbox" hidden id="box" />
+      <span class="btn"></span>
+      <span class="bg"></span>
+    </label>
+  </body>
+</html>

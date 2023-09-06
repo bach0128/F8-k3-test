@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        border: 1px solid red;
+        padding: 30px;
+      }
+
+      .box {
+        width: 100px;
+        height: 200px;
+        background-color: green;
+        margin: 0 auto;
+      }
+
+      .box {
+        background-color: green;
+        transform: skew(30deg);
+        position: relative;
+        text-align: center;
+      }
+
+      .box > span > p {
+        transform: skew(-30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <span>
+          <p>F8</p>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

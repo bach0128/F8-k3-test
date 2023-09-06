@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .title {
+        color: green;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .title > span {
+        position: absolute;
+        color: red;
+        height: 0;
+        left: 0;
+        right: 0;
+        transition: height 0.5s ease;
+        overflow: hidden;
+      }
+
+      .title:hover > span {
+        height: 100%;
+      }
+
+      .title > span > span {
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      Học lập trình để đi làm
+      <span>
+        <span> Học lập trình để đi làm </span>
+      </span>
+    </div>
+  </body>
+</html>

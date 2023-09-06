@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex07</title>
+    <style>
+      .title::before {
+        content: "";
+      }
+
+      .title::after {
+        content: "";
+      }
+
+      .sub-title::after {
+        content: attr(data-name);
+      }
+
+      .content p::first-line {
+        color: red;
+      }
+
+      .fullname::placeholder {
+        color: brown;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title">Khoa hoc fullstack tai f8</h1>
+    <h1 class="sub-title" data-name="F8">Khoa hoc fullstack tai</h1>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis
+        libero hic provident tenetur beatae deleniti praesentium veniam
+        consequuntur blanditiis recusandae quidem, natus aut eos est
+        necessitatibus. Obcaecati odit magnam veritatis sit placeat quo,
+        eligendi, blanditiis esse repellendus dolor quis nostrum explicabo
+        voluptatibus et distinctio facere beatae suscipit officia! Cupiditate!
+      </p>
+    </div>
+
+    <input type="text" placeholder="Ho va ten" class="fullname" />
+  </body>
+</html>

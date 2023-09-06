@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        box-shadow: 20px 20px 5px 10px, 40px 40px 5px green;
+      }
+
+      .box p {
+        text-shadow: -1px -1px 2px #000, 1px 1px 2px #000;
+        color: #fff;
+        z-index: 2em;
+      }
+
+      .content {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+        position: relative;
+        background: #fff;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+      }
+
+      .content::after {
+        content: "";
+        position: absolute;
+        border: 10px solid;
+        border-color: #fff transparent transparent transparent;
+        right: 10px;
+        bottom: -18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Sao lai khong nhi</p>
+    </div>
+
+    <div class="content">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque ipsa quo
+        illo adipisci esse voluptates. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Saepe voluptatem rem quaerat autem, est cumque nihil
+        dolore repellat accusamus porro fugit modi cupiditate vitae accusantium
+        ab distinctio sit. Nisi, incidunt!
+      </p>
+    </div>
+  </body>
+</html>

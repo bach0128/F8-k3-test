@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex06</title>
+    <style>
+      .website a[target] {
+        color: red;
+      }
+      /* .website a[href="https://fullstack.edu.vn/"]
+      {
+        color: aqua;
+      } */
+
+      /* select cac a co att CON href */
+      .website a[href^="https://fullstack.edu.vn/"]
+      {
+        color: aqua;
+      }
+
+      /* select cac a co ton tai att href */
+      .website a[href*="https://fullstack.edu.vn/"]
+      {
+        color: aqua;
+      }
+
+      .images a[href$=".jpg"] {
+        color: #000;
+      }
+
+      [class^="item-"] {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="website">
+      <li><a href="https://fullstack.edu.vn/">Fullstack</a></li>
+      <li>
+        <a href="https://fullstack.edu.vn/courses/react">Khoa hoc react </a>
+      </li>
+
+      <li><a href="https://dantri.com.vn/" target="_blank">dantri</a></li>
+      <li><a href="https://vnexpress.net/" target="_self">Vnexpress</a></li>
+    </ul>
+
+    <div class="images">
+      <a href="https://fullstack.edu.vn/images/anh1.jpg">Anh1</a>
+      <a href="https://fullstack.edu.vn/images/anh2.png">Anh2</a>
+      <a href="https://fullstack.edu.vn/images/anh3.png">Anh3</a>
+    </div>
+
+    <div class="list">
+      <div class="item-1">Item1</div>
+      <div class="item-2">Item2</div>
+      <div class="item-3">Item3</div>
+      <div class="item-4">Item4</div>
+      <div class="item-5">Item5</div>
+    </div>
+  </body>
+</html>

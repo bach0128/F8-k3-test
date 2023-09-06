@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif  ;
+}
+
+body h2 {
+    display: none;
+}
+
+/* media query */
+@media (max-width: 500px) {
+    
+}
+
+ /* Extra small devices (mobile, less than 576px) */
+@media screen and (max-width: 575px) { 
+    body h2.mobile { 
+        display: block;
+    }
+ }
+
+ /* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 576px) and (max-width: 991px) { 
+    body h2.tablet {
+        display: block;
+    }
+ }
+
+ /* Mobile and Tablet */
+@media screen and (max-width: 991px) {
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    body h2.desktop {
+        display: block;
+    }
+}

@@ -1,0 +1,33 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.first {
+    margin-top: 10px;
+}
+
+.last {
+    margin-top: 20px;
+}
+
+h2 {
+    border: 2px solid red;
+}
+
+.banner {
+    background-color: green;
+    color: #fff;
+    /* border: 1px solid red;
+     */
+    display: inline-block;
+    width: 100%;
+}
+
+.banner h1 {
+    /* margin: 30px 0;
+     */
+    padding: 30px 0;
+}

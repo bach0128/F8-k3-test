@@ -1,0 +1,19 @@
+
+.box {
+    width: 200px;
+    height: 400px;
+    border: 1px solid #f33500;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.box1 {
+    /* opacity: .5; */
+    filter: grayscale(.5);
+    filter: blur(.2);
+}
+
+.map iframe {
+    filter: blur(.5);
+    filter: grayscale(.5);
+}

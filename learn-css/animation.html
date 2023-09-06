@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        width: 300px;
+        height: 300px;
+        margin: 30px auto;
+        border: 1px solid red;
+        position: relative;
+      }
+
+      .box span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        animation-name: example;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes move {
+        from {
+          left: 0;
+          top: 0;
+        }
+
+        to {
+          left: 100%;
+          translate: -100%;
+        }
+      }
+
+      @keyframes example {
+        from {
+          background-color: red;
+          left: 0px;
+          top: 0px;
+        }
+
+        25% {
+          background-color: yellow;
+          left: 100%;
+          top: 0px;
+          translate: -100%;
+        }
+        50% {
+          background-color: blue;
+          left: 100%;
+          top: 100%;
+          translate: -100% -100%;
+        }
+        75% {
+          background-color: green;
+          left: 0px;
+          top: 100%;
+          translate: 0% -100%;
+        }
+        to {
+          background-color: red;
+          left: 0px;
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span></span>
+    </div>
+  </body>
+</html>

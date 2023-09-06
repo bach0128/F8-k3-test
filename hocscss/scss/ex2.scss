@@ -1,0 +1,47 @@
+
+@import 'variable';
+
+
+.header {
+    .header-inner {
+        padding: 0 10px;
+        .logo {
+            max-height: 200px;
+            overflow: hidden;
+        }
+        img {
+            min-width: 100%;
+            height: auto;
+        }
+
+        .menu {
+            background-color: greenyellow;
+            ul {
+                display: flex;
+                li {
+                    flex: 1 auto;
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .menu a {
+            color: blueviolet;
+            display: none;
+        }
+
+        
+    }
+}
+
+.footer {
+    #{$copyrightSelector} {
+        text-align: center;
+        font-size: $size + 0%;
+    }
+}

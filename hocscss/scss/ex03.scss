@@ -1,0 +1,188 @@
+/*  Toán tử và biểu thức
+ Toan tu so hoc + - x / % 
+ toan tu so sanh >, <, <=, !=, == (true , false)
+ Toan tu gan $a :1
+
+ Toan tu ly luan( ket hop) : and or not 
+*/
+$a: 1;
+$b: 2;
+$c: $a + $b;
+$c: $c + 2;
+
+.test {
+    font-size: #{$c}em;
+}
+
+// Cau lenh re nhanh ( thuc thi doan code theo 1 dieu kien )
+/* @if (condition) { } 
+@if (condition) { 
+} @else { 
+}
+
+@if @else if @else if 
+ */
+
+ $number: 5;
+ @if ($number % 2 != 0) {
+    .col-small {
+        font-size: #{$number *2}px;
+    }
+ } @else {
+    .col-medium {
+        font-size: #{$number * 5}px;
+    }
+ }
+
+ /* Ke thua trong scss
+
+ 1. extend
+ 2. placeholder ( pham vi rong hon)
+ 3. mixin 
+ */
+
+.box {
+    padding: 30px 0;
+    border: 1px solid #ccc;
+}
+
+.posts {
+    background: gray;
+    @extend .box;
+}
+
+.products {
+    background: #ddd;
+    @extend .box;
+}
+
+%section-base {
+    padding: 30px 0;
+    border: 1px solid #ccc;
+}
+
+.posts {
+    background: gray;
+    @extend %section-base;
+}
+
+/* 
+3.1 mixin ko co tham so 
+@mixin tenmixin {
+
+}
+
+3.2 mixin co tham so 
+@mixin tenmixin {($thamso1, $thamso2, ... ) {
+
+}
+
+goi mixin 
+@include tenmixin
+
+@inchlude tenmixin(doiso1, doiso2, ...)
+
+*/
+
+@mixin center {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    @include center;
+}
+
+@mixin center2($width, $space: 0) {
+    width: $width;
+    margin: $space auto;
+}
+
+.navbar {
+    @include center2(1000px, 30px)
+}
+
+@mixin position($type, $x, $y) {
+    position: absolute;
+    @if ($type == tl) {
+        top: $x;
+        left: $y;
+    } @else if ($type == tr) {
+        top: $x;
+        right: $y;
+    } @else if ($type == br) {
+        bottom: $x;
+        right: $y;
+    } @else {
+        inset: 0;
+    }
+}
+
+.navbar {
+    @include position(br, 0, 0)
+}
+
+@mixin center-all($type) {
+    @if ($type == display) {
+        display: flex;
+        justify-content: center;
+    } @else if ($type == position) {
+        position: relative;
+        > * {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 20px;
+        }
+    } @else if ($type == text) {
+        text-align: center;
+        > * {
+            display: inline-block;
+            text-align: left;
+        }
+    } @else if ($type == margin) { 
+    > * {
+        margin: 0 auto;
+        }
+    } @else {
+        inset: 0;
+    }
+}
+
+.sidebbar {
+    @include center-all(text)
+}
+
+/* vong lap  for through */
+
+$number2: 12;
+@for $i from 1 through $number2 {
+    // chay di chay lai naumber lan 
+    .col-#{$i} {
+        --column-size: #{$i};
+    }
+}
+
+$sizes: 40, 60, 80, 100;
+$count: length($sizes);
+@each $size in $sizes {
+    .col-#{$size} {
+        width: #{$size}px;
+    }
+}
+
+$sizes2: (small, 40), (medium, 60), (large, 80);
+
+@each $name, $size in $sizes2 {
+    .col-#{$name} {
+        width: #{$size}px;
+    }
+}
+
+$sizes3: small 40 normal, medium 60 400, large 80 600;
+
+$sizes4: (
+    small: 40,
+    medium: 60,
+    large: 80
+)

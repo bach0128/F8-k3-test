@@ -1,0 +1,20 @@
+/* .box {
+    padding: 30px;
+    margin: 30px;
+    border: 5px solid red;
+    width: 300px;
+} */
+.box {
+    /* display: flex; */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.product {
+    width: calc(100% / 4);
+    display: inline-block;
+}

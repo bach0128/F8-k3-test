@@ -1,0 +1,38 @@
+.header .header-inner {
+  padding: 0 10px;
+}
+.header .header-inner .logo {
+  max-height: 200px;
+  overflow: hidden;
+}
+.header .header-inner img {
+  min-width: 100%;
+  height: auto;
+}
+.header .header-inner .menu {
+  background-color: greenyellow;
+}
+.header .header-inner .menu ul {
+  display: flex;
+}
+.header .header-inner .menu ul li {
+  flex: 1 auto;
+}
+.header .header-inner .menu ul li a {
+  display: block;
+  text-decoration: none;
+}
+.header .header-inner .menu ul li a:hover {
+  cursor: pointer;
+}
+.header .header-inner .menu a {
+  color: blueviolet;
+  display: none;
+}
+
+.footer .copyright {
+  text-align: center;
+  font-size: 20%;
+}
+
+/*# sourceMappingURL=ex2.css.map */
